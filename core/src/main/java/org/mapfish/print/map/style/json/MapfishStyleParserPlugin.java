@@ -48,6 +48,7 @@ import static org.mapfish.print.map.style.json.MapfishJsonStyleVersion1.DEFAULT_
  *     "strokeOpacity":1,
  *     "strokeWidth":5,
  *     "strokeLinecap": "round",
+ *     "strokeLinejoin": "round"
  *     "strokeDashstyle": "dot",
  *
  *     "fontColor": "#000000",
@@ -105,12 +106,13 @@ import static org.mapfish.print.map.style.json.MapfishJsonStyleVersion1.DEFAULT_
  *       "strokeOpacity":1,
  *       "strokeWidth":5,
  *       "strokeLinecap": "round",
+ *       "strokeLinejoin": "round"
  *       "strokeDashstyle": "dot"
  *     }, {
- *       "type": "line",
+ *       "type" : "line",
  *       "strokeColor": "${val1}",
- *       "strokeOpacity":1,
- *       "strokeWidth":5,
+ *       "strokeOpacity": 1,
+ *       "strokeWidth": 5,
  *       "strokeLinecap": "round",
  *       "strokeDashstyle": "dot"
  *     }, {
@@ -272,6 +274,15 @@ import static org.mapfish.print.map.style.json.MapfishJsonStyleVersion1.DEFAULT_
  * <p>
  * Options:  butt (sharp square edge), round (rounded edge), and square (slightly elongated square edge).
  * Default is butt
+ * </p>
+ * </li>
+ * <li>
+ * <strong>strokeLinejoin</strong> (ECQL) - (line, polygon) the style to controls how line strings
+ * should be joined together.
+ * <p>
+ * Options: arcs, bevel, miter, miter-clip, round, see the SGV documentation about stroke-linejoin
+ * For more informations.
+ * Default is miter
  * </p>
  * </li>
  * <li>
