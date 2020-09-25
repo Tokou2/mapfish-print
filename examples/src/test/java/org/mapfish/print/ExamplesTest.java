@@ -303,10 +303,12 @@ public class ExamplesTest {
 
                         BufferedImage image = ImageIO.read(connection.getInputStream());
 
+                        LOGGER.warn("Run example '{}' ({}) - {}", example.getName(), requestFile.getName(), outputFormat);
                         if (ArrayUtils.contains(BITMAP_FORMATS, outputFormat)) {
                             File expectedOutputDir = new File(example, "expected_output");
                             File expectedOutput =
                                     getExpectedOutput(outputFormat, requestFile, expectedOutputDir);
+                            LOGGER.warn("Run example '{}' ({}) - {}", example.getName(), requestFile.getName(), ExpectedOutput);
                             if (!expectedOutput.exists()) {
                                 errors.put(
                                         example.getName() + " (" + requestFile.getName() + ")",
